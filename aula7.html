@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            height: 100vh;
+        }
+    .box{
+        border-radius: 50%;
+        border: 20px solid #aaaa;
+        background-color: cadetblue;
+        width: 100px;
+        height: 100px;
+        animation: rotacao 4s linear infinite;
+    }
+    @keyframes rotacao {
+        from{
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+        
+    }
+    
+.box{border-top-color: rgb(21, 252, 0);
+    border-right-color: blue;
+    border-left-color: yellow;
+    border-bottom-color: red;}
+    #item1{order: 1;}
+    #item2{order: 2;}
+    #item3{order: 1;}
+    #item4{order: -1;}
+
+  
+    </style>
+</head>
+<body>
+
+    <div class="box" id="item1">1</div>
+    <div class="box" id="item2">2</div>
+    <div class="box" id="item3">3</div>
+    <div class="box" id="item4">4</div>
+    <div class="box" id="item5">5</div>
+    <div class="box" id="item6">6</div>
+    
+</body>
+</html>
+
+coco bunda
