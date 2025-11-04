@@ -83,6 +83,7 @@ ppi1_lista1/
 - GitHub Pages ativado para visualização online
 - Link do projeto publicado compartilhado
 
+
 ## Tecnologias Utilizadas
 - **HTML5**
 - **CSS3**
@@ -90,7 +91,7 @@ ppi1_lista1/
 - Git/GitHub para versionamento e publicação
 
 ## Autor e Data
-**Autor:** Ronan Bernardes Martins 
+**Autor:** Ronan Bernardes Martins, 
 **Data de Criação:** 04/11/2025  
 
 ## Observações
