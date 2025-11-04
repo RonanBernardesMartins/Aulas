@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP na web</title>
+    <style>
+        .img{width: 700px; height: 500px;
+        display: block;
+        margin: 0 auto;
+    }
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+    }
+    th, td{
+        border: 1px solid #555;
+        padding: 10px;
+    }
+    th{
+        background-color: #036624;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <h1>O que é protocolo HTTP</h1>
+    <p>HTTP (Hypertext Transfer Protocol) é o protocolo de comunicação utilizado na World Wide Web para a transferência de dados entre clientes (navegadores) e servidores web.</p>
+         <p>Ele define como as mensagens são formatadas e transmitidas, bem como as ações que os servidores e navegadores devem tomar em resposta a várias solicitações.</p>
+    <ol>
+        <li>O cliente (navegador) envia uma solicitação HTTP ao servidor.(request)</li>
+        <li>O servidor processa a solicitação e envia uma resposta HTTP de volta ao cliente.(response)</li>
+    </ol><br>
+    <img class="img" src="https://cdn.melhoreshospedagem.com/wp/wp-content/uploads/2025/01/como-funciona-http.jpg" alt="">
+    <ol>
+        <h2>Exemplo de uma requisição HTTP:</h3>
+        <li>Voce digita www.google.com no navegador.</li>
+        <li>O navegador envia uma requisição HTTP GET ao servidor do Google.</li>
+        <li>O servidor responde com um HTTP 200 OK e envia o conteúdo HTML da página solicitada.</li>
+    </ol>
+        <h1>Estrutura de uma requisição HTTP</h1>
+        <p>Uma requisição HTTP é composta por três partes principais:</p>
+        <ol>
+            <li>Linha de requisição: contém o método HTTP, o caminho do recurso e a versão do protocolo.</li>
+            <p>GET /index.html HTTP/1.1</p>
+            <li>Headers: informações adicionais sobre a requisição, como tipo de conteúdo e autenticação.</li>
+            <p>Host: www.exemplo.com <br>
+            User-Agent: Mozilla/5.0 <br>
+            Accept: text/html</p>
+            <li>Corpo (opcional): dados enviados ao servidor, geralmente em requisições POST.</li>
+        </ol>
+        <h3>Exemplo de uma requisição POST:</h3>
+        <p>GET /produtos HTTP/1.1 <br>
+        Host: lojaonline.com.br <br>
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) <br>
+        Accept: text/html,application/xhtml+xml <br>
+        Accept-Language: pt-BR,pt;q=0.9 <br>
+        Connection: keep-alive
+        <h3>Explicando os campos:</h3>
+        <p>GET → Método HTTP usado para solicitar dados do servidor. <br>
+        /produtos → Caminho do recurso solicitado. <br>
+        HTTP/1.1 → Versão do protocolo HTTP. <br>
+        Host → Domínio do servidor que está sendo solicitado. <br>
+        User-Agent → Identifica o navegador e o sistema operacional do cliente. <br>
+        Accept → Tipos de conteúdo que o cliente pode processar. <br>
+        Connection → Tipo de conexão desejada (manter viva ou fechar após a resposta).
+        </p>
+        <h2>Estrutura de uma Resposta HTTP (response)</h2>
+        <p>A resposta HTTP do servidor contém:</p>
+        <ol>
+            <li>Linha de status: <br>
+                 indica o resultado da solicitação (ex: HTTP/1.1 200 OK).</li>
+            <li>Cabeçalhos: <br>
+                 informações adicionais sobre a resposta, como tipo de conteúdo e comprimento.</li>
+            <p>Content-Type: text/html; charset=UTF-8 <br>
+                Content-Length: 2048 <br>
+                Server: Apache/2.4.46
+            </p>
+            <li>Corpo (body): <br>
+                 contém os dados da resposta, como o HTML da página solicitada.</li>
+        </ol>
+        <h3>Exemplo de Response:</h3>
+        <p>HTTP/1.1 200 OK <br>
+            Date: Tue, 04 Nov 2025 14:23:10 GMT <br>
+            Server: Apache/2.4.46 (Ubuntu) <br>
+            Content-Type: text/html; charset=UTF-8 <br>
+            Content-Length: 2480 <br>
+            Connection: keep-alive</p>
+            <img  class="img"  src="https://learn.microsoft.com/pt-br/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/media/2-2-install-nginx-configure-it-reverse-proxy/curl-command.png" alt="">
+            <h2>Explicando Campos:</h2>
+            <table border="1">
+                <tr>
+                    <th>Campo</th>
+                    <th>Descrição</th>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>Método HTTP usado para solicitar dados do servidor.</td>
+                </tr>
+                <tr>
+                    <td>/produtos</td>
+                    <td>Caminho do recurso solicitado.</td>
+                </tr>
+                <tr>                   
+                    <td>HTTP/1.1</td>
+                    <td>Versão do protocolo HTTP.</td>
+                </tr>
+                <tr>                 
+                    <td>Host</td>
+                    <td>Domínio do servidor que está sendo solicitado.</td>
+                </tr>
+                <tr>                   
+                    <td>User-Agent</td>
+                    <td>Identifica o navegador e o sistema operacional do cliente.</td>
+                </tr>
+                <tr>          
+                    <td>Accept</td>
+                    <td>Tipos de conteúdo que o cliente pode processar.</td>
+                </tr>
+                <tr>                  
+                    <td>Connection</td>
+                    <td>Tipo de conexão desejada (manter viva ou fechar após a resposta).</td>
+                </tr>
+            </table>
+            <h2>Principais Métodos HTTP</h2>
+            <table border="1">
+               <tr>
+                <th>Método</th>
+                <th>Descrição</th>
+               </tr>
+               <tr>
+                <td>GET</td>
+                <td>Solicita dados de um recurso.</td>
+               </tr>
+               <tr>
+                <td>POST</td>
+                <td>Envia dados para o servidor.</td>
+               </tr>
+               <tr>
+                <td>PUT</td>
+                <td>Atualiza um recurso existente.</td>
+               </tr>
+               <tr>
+                <td>DELETE</td>
+                <td>Remove um recurso.</td>
+               </tr>
+               <tr>
+                <td>PATCH</td>
+                <td>Aplica modificações parciais a um recurso.</td>
+               </tr>
+            </table>
+            <h2>Códigos de Status HTTP Comuns</h2>
+            <table>
+                <tr>
+                    <th>Código</th>
+                    <th>Descrição</th>
+                    <th>Significado</th>
+                </tr>
+                <tr>
+                    <td>200 OK</td>
+                    <td>Requisição bem-sucedida</td>
+                    <td>O servidor processou a requisição com sucesso</td>
+                </tr>
+                <tr>
+                    <td>201 Created</td>
+                    <td>Criado</td>
+                    <td>O servidor criou um novo recurso</td>
+                </tr>
+                <tr>
+                    <td>400 Bad Request</td>
+                    <td>Erro do cliente</td>
+                    <td>Requisição inválida</td>
+                </tr>
+                <tr>
+                    <td>401 Unauthorized</td>
+                    <td>Não autorizado</td>
+                    <td>Necessita autenticação</td>
+                </tr>
+                <tr>
+                    <td>404 Not Found</td>
+                    <td>Não encontrado</td>
+                    <td>O recurso solicitado não foi encontrado</td>
+                </tr>
+                <tr>
+                    <td>500 Internal Server Error</td>
+                    <td>Erro interno do servidor</td>
+                    <td>Ocorreu um erro inesperado no servidor</td>
+                </tr>
+            </table>
+            <img  class="img"  src="https://www.researchgate.net/publication/362029117/figure/fig1/AS:11431281112332405@1673382000641/Figura-5-Diagrama-de-sequencia-do-funcionamento-dos-programas.png" alt="">
+            <h3>Exemplo pratico via terminal (curl)</h3>
+            <pre><code>curl -X GET http://api.exemplo.com/produtos</code></pre>
+            <ul>
+                <H2>Resultado:</H2>
+            </ul>
+            <p>GET / HTTP/1.1 <br>
+            Host: www.google.com <br>
+            HTTP/1.1 200 OK <br>
+            Content-Type: text/html; charset=ISO-8859-1</p>
+</body>
+</html>
