@@ -14,16 +14,41 @@
             text-align: center;
             color: rgb(255, 255, 255);
         }
+        span{
+            color: rgb(255, 0, 0);
+            font-weight: bold;
+            border: 4px solid rgb(0, 0, 0);
+            padding: 0px 5px;
+            border-radius: 8px;
+        }
+        @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    .bola{
+        width: 500px;
+        height: 500px;
+        background-color: rgb(115, 255, 0);
+        border: 40px solid rgb(0, 0, 0);
+        border-radius: 50%;
+        margin: auto;
+        animation: rotate 3s linear infinite;
+    }
+    .bola{
+        
+    }
     </style>
 </head>
 <body>
-    <h1>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde doloribus quas, asperiores iusto reprehenderit cupiditate repellat qui, ipsum doloremque velit consequatur minus hic officiis nobis necessitatibus maiores, temporibus magnam dicta?     <br>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptate nesciunt veniam reprehenderit odit sapiente dolor? Animi consequuntur facilis ipsam! Quaerat, error placeat dignissimos itaque blanditiis sit ipsum saepe minus. <br>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui vel autem sint libero distinctio architecto et numquam velit ipsa adipisci? Cupiditate quibusdam qui reiciendis ab quis nam ut nesciunt? Assumenda! <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sit, dolores expedita ipsa et minus eligendi odio neque nobis ab dolorum nesciunt magnam, ea corporis? Provident id aliquid consequatur sit. <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, sapiente beatae aut architecto rerum accusantium laborum iusto, voluptatem nemo neque perspiciatis consequuntur reiciendis iure magni unde quidem! Quam, ipsam velit! <br>
-    </h1>
-    
+    <h1 class="paragrafo1">Lorem ipsum dolor <span>sit</span> amet consectetur adipisicing elit.</h1>
+    <h1 class="paragrafo2">Lorem ipsum <span>CSS</span> dolor sit amet consectetur adipisicing elit.</h1>
+    <h1 class="paragrafo3">Lorem ipsum dolor <span>HTML</span> sit amet consectetur adipisicing elit.</h1>
+    <div class="bola">
+
+    </div class="bola" id="bola1">1</div>
 </body>
 </html>
