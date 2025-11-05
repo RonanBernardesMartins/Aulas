@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo</title>
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            /* Removi o font-size: 1.5em daqui para não 
+               deixar o H2 gigante */
+        }
+        
+        .curriculo{
+            display: grid;
+            grid-template-columns: 300px 1fr; /* Perfeito! */
+            width: 100%;
+            min-height: 100vh;
+            margin: 0px auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        /* O .container não era necessário, pois .curriculo já usa Grid */
+
+        .sidebar{
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+        }
+
+        /* --- CORREÇÃO AQUI --- */
+        /* Simplifiquei: o Grid já cuida do tamanho, 
+           só precisamos do fundo e do preenchimento. */
+        .main-content{
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        .foto-de-perfil{
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            display: block;
+            object-fit: cover;
+            margin: 0 auto 30px;
+        }
+
+        .sidebar h2{
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+            margin-top: 20px;
+            font-size: 1.8em; 
+            font-weight: 600;
+        }
+
+        .contato p{
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .contato strong{
+            display: block; 
+            font-size: 0.9em;
+            color: #bdc3c7;
+            text-transform: uppercase; 
+            letter-spacing: 0.5px; 
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="curriculo">
+
+        <aside class="sidebar">
+            <img src="https://avatars.githubusercontent.com/u/228802231?v=4" alt="foto de perfil" class="foto-de-perfil">
+            <section class="contato">
+                <h2>Pessoal</h2>
+                <p>
+                    <strong>Nome</strong>
+                    Ronan Bernardes Martins
+                </p>
+                <p>
+                    <strong>Endereço</strong>
+                    Rua Ricardo Benner, 40 <br>
+                    89040-454 - Blumenau - SC
+                </p>
+                <p>
+                    <strong>Número de telefone</strong>
+                    (48) 99843-2595
+                </p>
+                <p>
+                    <strong>Interesses</strong>
+                    Música, jogos, tecnologia, esportes, programação.
+                </p>
+            </section>
+        </aside>
+
+        <main class="main-content">
+            <h1>Experiência Profissional</h1>
+            <p>...</p>
+            
+            <h2>Educação</h2>
+            <p>...</p>
+        </main>
+        
+    </div>
+</body>
+</html>
