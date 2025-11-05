@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lorem</title>
-    <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
             margin: 20px;
             background-color: #0400ff;
         }
         h1{
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        p{
+            font-size: 20px;
             text-align: center;
             color: rgb(255, 255, 255);
         }
@@ -41,14 +39,3 @@
     .bola{
         
     }
-    </style>
-</head>
-<body>
-    <h1 class="paragrafo1">Lorem ipsum dolor <span>sit</span> amet consectetur adipisicing elit.</h1>
-    <h1 class="paragrafo2">Lorem ipsum <span>CSS</span> dolor sit amet consectetur adipisicing elit.</h1>
-    <h1 class="paragrafo3">Lorem ipsum dolor <span>HTML</span> sit amet consectetur adipisicing elit.</h1>
-    <div class="bola">
-
-    </div class="bola" id="bola1">1</div>
-</body>
-</html>
